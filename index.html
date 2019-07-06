@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>TheDroid.io</title>
+  <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="assets/css/chart.min.css">
+  <link type="text/css" rel="stylesheet" href="assets/css/main.css">
+</head>
+<body ng-app="droid">
+  <div class="container-fluid" ng-controller="main.controller">
+    <div class="loader" ng-if="!loaded"></div>
+    <div class="col-md-8 col-md-offset-2">
+      <canvas id="bar-chart" width="800" height="450"></canvas>
+    </div>
+    <div class=""ng-if="loaded">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="col-md-6 text-center">
+        <h3>Top Source</h3>
+        <ul class="list-unstyled">
+          <li>{{sort_src[0][0]}} : {{sort_src[0][1]}}</li>
+          <li>{{sort_src[1][0]}} : {{sort_src[1][1]}}</li>
+          <li>{{sort_src[2][0]}} : {{sort_src[2][1]}}</li>
+        </ul>
+      </div>
+      <div class="col-md-6 text-center">
+        <h3>Top Destination</h3>
+        <ul class="list-unstyled">
+          <li>{{sort_dest[0][0]}} : {{sort_dest[0][1]}}</li>
+          <li>{{sort_dest[1][0]}} : {{sort_dest[1][1]}}</li>
+          <li>{{sort_dest[2][0]}} : {{sort_dest[2][1]}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+<script type="text/javascript" src="assets/js/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="assets/js/bootstrap.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="assets/js/angular.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="assets/js/chart.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="assets/js/main.js" charset="utf-8"></script>
+</html>
