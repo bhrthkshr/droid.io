@@ -1,8 +1,8 @@
 var app = angular.module("droid", []);
 app.controller("main.controller", function($scope, $http) {
+  $scope.loaded= false;
   $scope.dates = [];
   $scope.filtered_by_months = [];
-  $scope.loaded= false;
   //initialize months in a year
   const monthNames = ["January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
